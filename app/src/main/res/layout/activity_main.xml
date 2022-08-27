@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            app:popupTheme="@style/ToolbarPopup"
+            app:subtitle="A location tracking project"
+            app:subtitleTextAppearance="@style/ActionBarSubtitleStyle"
+            app:subtitleTextColor="#CDF8F8FF"
+            app:titleMargins="5dp"
+            app:titleTextAppearance="@style/ActionBarTitleStyle"
+            app:titleTextColor="#f8f8ff" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

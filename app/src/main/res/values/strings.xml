@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BeacOnOffice</string>
+    <string name="fragment_home">Home</string>
+    <string name="android_table">Android Device</string>
+    <string name="fragment_logs">Measurement Results</string>
+    <string name="hardware_table">Hardware</string>
+    <string name="beacon_table">Beacons</string>
+    <string name="stop_scan">Print Data</string>
+    <string name="connect">Connect</string>
+    <string name="connecting">Connecting...</string>
+    <string name="data_button">Add Data</string>
+    <string name="ok">OK</string>
+    <string name="start">Start tracking</string>
+    <string name="clear">Reset</string>
+    <string name="pause">Pause tracking</string>
+    <string name="map">Show me on Map</string>
+    <string name="mail">Mail results to</string>
+    <string name="send">Send</string>
+    <string name="email_hint">someone@example.com</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <group>
+        <item
+            android:id="@+id/start"
+            android:icon="@mipmap/start"
+            android:title="@string/start"
+            android:visible="true"
+            app:showAsAction="withText"
+             />
+
+        <item
+            android:id="@+id/pause"
+            android:icon="@mipmap/pause"
+            android:title="@string/pause"
+            android:visible="true"
+            app:showAsAction="withText"
+             />
+
+        <item
+            android:id="@+id/reset"
+            android:icon="@mipmap/reset"
+            android:title="@string/clear"
+            android:visible="true"
+            app:showAsAction="withText"
+             />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/map"
+            android:icon="@mipmap/map"
+            android:title="@string/map"
+            android:visible="true"
+            app:showAsAction="withText" />
+    </group>
+
+</menu>

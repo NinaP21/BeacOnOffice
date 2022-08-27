@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/table_title"
+        android:gravity="center"
+        android:textColor="#2B1650"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</TableRow>

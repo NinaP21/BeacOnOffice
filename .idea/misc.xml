@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable-anydpi/logs.xml" value="0.263" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable-anydpi/menu_icon.xml" value="0.263" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2595" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/action_bar_divider.xml" value="0.302" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/border.xml" value="0.281" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/circle.xml" value="0.281" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2595" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/info_border.xml" value="0.2405" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/logs_border.xml" value="0.2125" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/map.xml" value="0.302" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/popup_back.xml" value="0.2595" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/red_circle.xml" value="0.2595" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/drawable/start.xml" value="0.302" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/activity_main.xml" value="0.4927536231884058" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/activity_maps.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/fragment_info.xml" value="0.5" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/fragment_maps.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/fragment_scan.xml" value="0.41510416666666666" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/home_fragment.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/logs_fragment.xml" value="0.5253863134657837" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/logs_line.xml" value="0.22814128546612622" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/pop_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/recyclerview_line.xml" value="0.359349593495935" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/table_row.xml" value="0.5" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/layout/table_title.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/menu/bottom_nav_menu.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/menu/main_menu.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/logo.xml" value="0.302" />
+        <entry key="..\:/Users/apantele/AndroidStudioProjects/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/pause.xml" value="0.302" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/drawable-anydpi/info_map.xml" value="0.2365" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/drawable/map_foreground.xml" value="0.2405" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/drawable/popup_back.xml" value="0.2405" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/activity_main.xml" value="0.234375" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/activity_maps.xml" value="0.33" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/fragment_info.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/info_pop_up.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/logs_fragment.xml" value="0.2578125" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/logs_line.xml" value="0.23020833333333332" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/map_popup.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/pop_up.xml" value="0.234375" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/recyclerview_line.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/table_row.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/layout/table_title.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/menu/main_menu.xml" value="0.234375" />
+        <entry key="..\:/Users/apantele/Desktop/BeacOnOffice/app/src/main/res/menu/maps_menu.xml" value="0.234375" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/activity_maps.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/fragment_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/fragment_scan.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/home_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/logs_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/pop_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/table_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/table_title.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/menu/main_menu.xml" value="0.11302083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
