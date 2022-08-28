@@ -46,7 +46,7 @@ import java.util.Collections;
  * @see LogResult
  * @see LogsAdapter
  * @see ScanBeacons
- * @since 5/8/2022
+ * @since 31/8/2022
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *Starts, Pauses or Resets the measurements according to user's choice, in the main Toolbar.
+     * Starts, Pauses or Resets the measurements according to user's choice, in the main Toolbar.
      * @see #startMeasurements()
      * @see #resetMeasurements()
      * @see #pauseMeasurements()

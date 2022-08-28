@@ -26,7 +26,17 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
  * An activity that displays a Google map with a marker (pin) to indicate a particular location.
+ * This activity gets active when the user chooses the menu option "Show me on map" from the main toolbar.
+ * After that, a Google map appears with the WiRa initiator device's location, provided that the location
+ * tracking has started. The GPS coordinates get calculated only by using the relative position of the
+ * initiator inside the office and not by taking into consideration the GPS location of the Android device.
+ *
+ * @author Aikaterini - Maria Panteleaki
+ * @version 1.0
+ * @see MainActivity
+ * @since 31/8/2022
  */
+
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private Toolbar toolbar;
@@ -37,10 +47,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private double latitude;
     private double longitude;
 
+    /**
+     * Sets up the visual layout of the map display.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_maps);
 
         mapFrameLayout = findViewById(R.id.map_frame);
@@ -70,6 +82,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
     }
 
+    /**
+     * Make the "information" option from the toolbar menu appear with its icon.
+     */
     @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
@@ -80,6 +95,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return true;
     }
 
+    /**
+     * When the user taps on the "information" icon in toolbar's menu,
+     * a popup message appears that informs them about the method used
+     * to calculate the GPS location shown.
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.map_info)  {
@@ -90,22 +110,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     /**
-     * Manipulates the map when it's available.
-     * The API invokes this callback when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user receives a prompt to install
-     * Play services inside the SupportMapFragment. The API invokes this method after the user has
-     * installed Google Play services and returned to the app.
+     * Manipulates the map when it's available. The API invokes this callback when the map is ready to be used.
+     *
+     * If the location tracking has not started yet, then there is not any available location to show,
+     * so the map displays a zoomed out part of the earth and a popup appears,
+     * which informs the user about that.
+     *
+     * If there is an available location point though, the function retrieves the GPS coordinates
+     * of the WiRa initiator and creates a marker. When the user clicks on that marker,
+     * a popup window shows containing the location's GPS coordinates.
+     *
+     * @see HomeFragment#calculateGpsCoordinates(double, double)
+     * @see #setPopUp(String)
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        Log.i("*********************************************************", "//////////////////////////////////////  " + HomeFragment.currentCoordinates.equals(null));
-        // Add a marker in Sydney, Australia,
-        // and move the map's camera to the same location.
         if (HomeFragment.currentCoordinates == null) {
-            Log.i("*********************************************************", "--------------------------------");
             latitude = 5.558562;
             longitude = -0.200923;
             LatLng accra = new LatLng(latitude, longitude);
@@ -114,16 +135,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             String message = "There is not any\navailable location yet";
             setPopUp(message);
+
             return ;
         }
 
-
         latitude = HomeFragment.currentCoordinates[0];
         longitude = HomeFragment.currentCoordinates[1];
-        LatLng currentPosistion = new LatLng(latitude, longitude);
+        LatLng currentPosition = new LatLng(latitude, longitude);
         String marketText = "Latitude: " + latitude + "\nLongitude: " + longitude;
-        googleMap.addMarker(new MarkerOptions().position(currentPosistion));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(currentPosistion));
+        googleMap.addMarker(new MarkerOptions().position(currentPosition));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(currentPosition));
         googleMap.moveCamera(CameraUpdateFactory.zoomTo(18));
         googleMap.getUiSettings().setMapToolbarEnabled(false);
 
@@ -139,6 +160,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
     }
 
+    /**
+     * Sets up the format of the pop up window used to show some informative message
+     * at the center of the map screen.
+     * 
+     * @param text the text message that will be inside the popup window
+     * @see #onMapReady(GoogleMap) 
+     * @see #onOptionsItemSelected(MenuItem)
+     */
     public void setPopUp(String text) {
 
         View popupViewInfo = getLayoutInflater().inflate(R.layout.info_pop_up, null);

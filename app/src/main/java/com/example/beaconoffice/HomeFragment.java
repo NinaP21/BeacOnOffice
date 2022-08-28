@@ -28,6 +28,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.gms.maps.GoogleMap;
+
 import org.altbeacon.beacon.Beacon;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -176,6 +179,8 @@ public class HomeFragment extends Fragment {
      * Then, computes the pixel coordinates of the initiator based on its physical coordinates in meters.
      * If the coordinates are invalid, then the initiator's icon is a black one with an exclamation mark in it,
      * showing that the calculated position is practically wrong.
+     * Then, another function is called to calculate the GPS coordinates of the WiRa device,
+     * based on these relative cartesian ones.
      * This function also adds the newly generated data to the string of the potential e-mail message and
      * also to the list that holds the data of the "Measurement Results" table in Logs page.
      * After all this, the canvas that represents the building gets updated.
@@ -183,9 +188,11 @@ public class HomeFragment extends Fragment {
      * @param coordinates the coordinates of the initiator in meters, calculated by the mathematical algorithm
      * @param distances the distances of the initiator from the three AltBeacons
      *                  which it used in order to compute the coordinates
+     *
      * @see MapView
      * @see ScanBeacons#addBeaconValues(Beacon)
      * @see MapView#updateCanvas()
+     * @see #calculateGpsCoordinates(double, double)
      */
     public void receiveCoords(double[] coordinates, ArrayList<String> distances) {
 
@@ -210,19 +217,15 @@ public class HomeFragment extends Fragment {
                 xMeterCoord = 10 + 2.35;
             }
             if (yMeterCoord < 0) {
-                Log.i(" y'y Limit!!!!!!", "   " + yMeterCoord);
                 yMeterCoord = 0.0;
             }
             else if (yMeterCoord > yTotalMeters) {
-                Log.i(" y'y Limit!!!!!!", "   " + yMeterCoord);
                 yMeterCoord = (double) yTotalMeters ;
             }
             if (xMeterCoord < 0) {
-                Log.i(" x'x Limit!!!!!!", "   " + xMeterCoord);
                 xMeterCoord = 0.0;
             }
             else if (xMeterCoord > xTotalMeters) {
-                Log.i(" x'x Limit!!!!!!", "   " + xMeterCoord);
                 xMeterCoord = (double) xTotalMeters;
             }
 
@@ -264,6 +267,17 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    /**
+     * According to the WiRa initiator's cartesian coordinates inside the office,
+     * the function applies an algorithm to calculate the corresponding
+     * GPS coordinates of the current position.
+     * 
+     * @param x the x-coordinate of the WiRa initiator inside the office
+     * @param y the y-coordinate of the WiRa initiator inside the office
+     *
+     * @see #receiveCoords(double[], ArrayList) 
+     * @see MapsActivity#onMapReady(GoogleMap)
+     */
     public void calculateGpsCoordinates (double x, double y) {
         final double earthRadius = 6371010;
         final double epsilon = 0.000001;

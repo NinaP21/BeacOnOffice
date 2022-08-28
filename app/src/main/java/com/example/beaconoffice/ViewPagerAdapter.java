@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author Aikaterini - Maria Panteleaki
  * @version 1.0
- * @since 5/8/2022
+ * @since 31/8/2022
  */
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
