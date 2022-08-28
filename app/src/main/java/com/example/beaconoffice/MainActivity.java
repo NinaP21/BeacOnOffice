@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean hasAskedToStart = false;
 
     /**
-     * Informs the user that the device's Bluetooth has been turned ON or OFF.
+     * Informs the user that the device's Bluetooth has been turned OFF.
      */
     private final BroadcastReceiver bleReceiver = new BroadcastReceiver() {
         @Override
@@ -97,6 +97,15 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    /**
+     * Gets executed when the device's Bluetooth is disabled so the application asks the user
+     * to enable it. If the user agrees and they have previously chosen to start the measurements,
+     * then the program begins the procedure to start location tracking.
+     * However, if the user doesn't agree to enable Bluetooth, then the application informs them
+     * that this is necessary for BeacOnOffice's function.
+     *
+     * @see #getBlePermissions()
+     */
     private ActivityResultLauncher<Intent> requestPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
                 @Override
@@ -109,10 +118,15 @@ public class MainActivity extends AppCompatActivity {
             });
 
     /**
-     * Sets up the visual layout of the application.
-     * Makes sure that device's Bluetooth Stack works properly and that the application
-     * will continue to run even if the device is at Low Power Standby mode.
+     * Sets up the visual layout of the application as well as some initial configuration parameters.
+     * Makes sure that device's Bluetooth Stack works properly
      * Then, it sets up the Bluetooth environment and the e-mail sending feature.
+     *
+     * @see ViewPagerAdapter
+     * @see ScanBeacons
+     * @see #robustBleStack()
+     * @see #initialiseBle()
+     * @see #setUpEmail()
      */
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -146,6 +160,9 @@ public class MainActivity extends AppCompatActivity {
         setUpEmail();
     }
 
+    /**
+     * Make the options from the toolbar menu appear with their icons apart from their text titles.
+     */
     @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
@@ -191,9 +208,13 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Starts, Pauses or Resets the measurements according to user's choice, in the main Toolbar.
+     * Moreover, it can redirect the user to a Google Map that shows the last tracked location
+     * of the WiRa initiator.
+     *
      * @see #startMeasurements()
      * @see #resetMeasurements()
      * @see #pauseMeasurements()
+     * @see MapsActivity
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -251,7 +272,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Checks if the application has access to the device's location and if the Bluetooth is enabled.
+     * Checks if the application has access to the device's approximate location and if the Bluetooth is enabled.
      * @return true if all permissions are granted
      * @see #startMeasurements()
      */
