@@ -58,6 +58,22 @@
         <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/table_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/layout/table_title.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ninap/Desktop/BeacOnOffice/app/src/main/res/menu/main_menu.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable-anydpi/home.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable-anydpi/info_map.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable-anydpi/logs.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable-anydpi/menu_icon.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable-anydpi/scan.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable/circle.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable/info_border.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable/logs_border.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/drawable/map_foreground.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/layout/fragment_scan.xml" value="0.1037037037037037" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/logo.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/logo_round.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/map.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/reset_round.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/start.xml" value="0.1285" />
+        <entry key="..\:/Users/ninap/Desktop/GitHub/BeacOnOffice/app/src/main/res/mipmap-anydpi-v26/start_round.xml" value="0.1285" />
       </map>
     </option>
   </component>

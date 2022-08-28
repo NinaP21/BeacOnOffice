@@ -3,29 +3,19 @@ package com.example.beaconoffice;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
-
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
 import androidx.appcompat.widget.Toolbar;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -33,7 +23,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.material.snackbar.Snackbar;
 
 /**
  * An activity that displays a Google map with a marker (pin) to indicate a particular location.
@@ -111,9 +100,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
+        Log.i("*********************************************************", "//////////////////////////////////////  " + HomeFragment.currentCoordinates.equals(null));
         // Add a marker in Sydney, Australia,
         // and move the map's camera to the same location.
         if (HomeFragment.currentCoordinates == null) {
+            Log.i("*********************************************************", "--------------------------------");
             latitude = 5.558562;
             longitude = -0.200923;
             LatLng accra = new LatLng(latitude, longitude);
@@ -124,6 +116,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             setPopUp(message);
             return ;
         }
+
+
         latitude = HomeFragment.currentCoordinates[0];
         longitude = HomeFragment.currentCoordinates[1];
         LatLng currentPosistion = new LatLng(latitude, longitude);

@@ -5,10 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 /**
@@ -18,7 +16,7 @@ import java.util.ArrayList;
  * @author Aikaterini - Maria Panteleaki
  * @version 1.0
  * @see LogResult
- * @since 5/8/2022
+ * @since 31/8/2022
  */
 public class LogsAdapter extends RecyclerView.Adapter<LogsAdapter.ViewHolder> {
 

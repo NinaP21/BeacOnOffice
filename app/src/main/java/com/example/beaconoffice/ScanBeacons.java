@@ -23,7 +23,7 @@ import java.util.Locale;
  * @version 1.0
  * @see MainActivity
  * @see HomeFragment
- * @since 5/8/2022
+ * @since 31/8/2022
  */
 public class ScanBeacons {
 

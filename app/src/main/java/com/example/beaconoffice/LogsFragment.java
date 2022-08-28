@@ -23,9 +23,12 @@ import java.util.Date;
 /**
  * LogsFragment class creates the "Logs" page, which shows the "Measurement Results" table
  * and provides the user with the ability to send the table's data to an e-mail address of their choice.
+ * @author Aikaterini - Maria Panteleaki
+ * @version 1.0
  * @see SendMailAPI
  * @see LogsAdapter
  * @see LogResult
+ * @since 31/8/2022
  */
 public class LogsFragment extends Fragment {
 

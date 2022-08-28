@@ -10,7 +10,7 @@ import java.util.function.Predicate;
  * @author Aikaterini - Maria Panteleaki
  * @version 1.0
  * @see LogsAdapter
- * @since 5/8/2022
+ * @since 31/8/2022
  */
 public class LogResult implements Predicate<LogResult> {
 
