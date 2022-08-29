@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -11,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -23,6 +27,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.Objects;
 
 /**
  * An activity that displays a Google map with a marker (pin) to indicate a particular location.
@@ -44,6 +50,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private FrameLayout mapFrameLayout;
     private PopupWindow popupWindowCoords, popupWindowInfo;
     private TextView popupCoordsTextView, popupInfoTextView;
+    private MainActivity mainActivity;
     private double latitude;
     private double longitude;
 
@@ -53,6 +60,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_maps);
 
         mapFrameLayout = findViewById(R.id.map_frame);
@@ -80,6 +88,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.gmap);
         mapFragment.getMapAsync(this);
+
     }
 
     /**
@@ -126,7 +135,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        if (HomeFragment.currentCoordinates == null) {
+
+        if (HomeFragment.currentCoordinates[0] == null && HomeFragment.currentCoordinates[1] == null) {
             latitude = 5.558562;
             longitude = -0.200923;
             LatLng accra = new LatLng(latitude, longitude);

@@ -18,13 +18,15 @@
 
     <style name="ActionBarSubtitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
         <item name="android:textStyle">italic</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:typeface">serif</item>
+        <item name="fontFamily">sans-serif-light</item>
     </style>
 
     <style name="ActionBarTitleStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textSize">21sp</item>
+        <item name="android:textSize">23sp</item>
         <item name="android:typeface">serif</item>
+        <item name="fontFamily">sans-serif-light</item>
     </style>
 
     <style name="ToolbarPopup" parent="ThemeOverlay.AppCompat.ActionBar">

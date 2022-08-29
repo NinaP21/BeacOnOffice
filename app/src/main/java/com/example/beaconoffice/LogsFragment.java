@@ -113,7 +113,6 @@ public class LogsFragment extends Fragment {
      * and the body is created in HomeFragment class.
      *
      * @author Aikaterini - Maria Panteleaki
-     * @version 1.0
      * @see HomeFragment#getEmailBody()
      * @see SendMailAPI
      * @since 5/8/2022

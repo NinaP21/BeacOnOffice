@@ -26,7 +26,7 @@
             android:padding="5dp"
             android:layout_margin="10dp"
             app:popupTheme="@style/ToolbarPopup"
-            app:subtitle="A location tracking project"
+            app:subtitle="@string/subtitle"
             app:subtitleTextAppearance="@style/ActionBarSubtitleStyle"
             app:subtitleTextColor="#CDF8F8FF"
             app:titleMargins="5dp"
