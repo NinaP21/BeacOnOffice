@@ -593,7 +593,7 @@ public class HomeFragment extends Fragment {
             mainActivity.clearLogsAdapter();
             Arrays.fill(active, false);
             mapView.updateCanvas();
-            currentCoordinates = null;
+            currentCoordinates = new Double[]{null, null};
         }
     }
 }

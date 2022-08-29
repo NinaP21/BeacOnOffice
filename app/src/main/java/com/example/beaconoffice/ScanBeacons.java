@@ -133,7 +133,6 @@ public class ScanBeacons {
     public void addBeaconValues(Beacon beacon) {
 
         String data = byteArrayToHexString(beacon.getId1().toByteArray()) + byteArrayToHexString(beacon.getId2().toByteArray());
-        //Log.i("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", " "+data);
         Log.i("Counter ", "  " + beacon.getDataFields());
 
         ArrayList<String> peerID = new ArrayList<>();
